@@ -10,7 +10,9 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<style>
 
-			
+			span.iitPun{
+				color: rgba(225, 0, 0, 0.75);
+			}
 
 		</style>
 	</head>
@@ -18,7 +20,7 @@
 
 		<section class="module parallax background1">
 			<div class="container">
-				<h1>Quick PIITch</h1>
+				<h1>Quick P<span class="iitPun">IIT</span>ch</h1>
 			</div>
 		</section>
 
@@ -31,6 +33,24 @@
 
 		<section class="module parallax background2">
 			<div class="container">
+				<h1>Register</h1>
+				<form id="registration">
+					<input type="text" id="name" placeholder="Your Name">
+					<input type="text" id="email" placeholder="Your Email">
+					<button onclick="submitUser();">Submit</button>
+				</form>
+			</div>
+		</section>
+
+		<section class="module content">
+			<div class="container">
+				<h2>What's it all about?</h2>
+				<p>Come see..</p>
+			</div>
+		</section>
+
+		<section class="module parallax background3">
+			<div class="container">
 				<h1>Idea Shop</h1>
 			</div>
 		</section>
@@ -39,7 +59,11 @@
 
 		<script type="text/javascript">
 
-
+			function submitUser(){
+				var name = document.getElementById('name').value;
+				var email = document.getElementById('email').value;
+				alert(name + ': ' + email);
+			}
 
 		</script>
 		

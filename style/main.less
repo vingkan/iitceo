@@ -19,6 +19,21 @@
 /*---> TEXT <---------------------------------*/
 /*--------------------------------------------*/
 
+h1{
+	font-family: @AlfaSlabOne;
+	text-align: center;
+	font-size: 2.0 * @smallFont;
+	color: rgba(255, 255, 255, 0.75);
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+}
+
+h2{
+	font-family: @AlfaSlabOne;
+	text-align: center;
+	font-size: 1.5 8 @smallFont;
+}
+
 p{
 	width: 90%;
 	margin: 5vw;
@@ -46,13 +61,6 @@ html{
 	margin: 0 auto;
 }
 
-.ParallaxBackground(){
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-position: fixed;
-	background-size: cover;
-}
-
 .CoverBackground(){
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -71,25 +79,64 @@ input, button, select{
 	border: none;
 }
 
+form#registration{
+	width: 90%;
+	.Center();
+	background: rgba(255, 255, 255, 0.5);
+	margin-bottom: 0.5 * @parallaxBoxSize;
+}
+
+input{
+	width: 100%;
+}
+
+button{
+	width: 50%;
+	.Center();
+}
+
 /*--------------------------------------------*/
 /*---> BACKGROUNDS <--------------------------*/
 /*--------------------------------------------*/
 
 section.module.background1{
-	background: url('img/squaresTunnel.jpg');
+	background: url('img/iitSkyline.jpg');
 }
 
 section.module.background2{
-	background: url('img/theBean.jpg');
+	background: url('img/squaresTunnel.jpg');
+}
+
+section.module.background3{
+	background: url('img/eastSide.jpg');
 }
 
 /*--------------------------------------------*/
 /*---> PARALLAX <-----------------------------*/
 /*--------------------------------------------*/
 
+@parallaxBoxSize: 40vh;
+
+section.parallax{
+	
+	min-height: @parallaxBoxSize;
+
+	h1{
+		line-height: @parallaxBoxSize;	
+	}
+	
+}
+
 /*div.container{
 	max-width: 90%;
 	.Center();
+}
+
+.ParallaxBackground(){
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: cover;
 }
 
 section.module{
