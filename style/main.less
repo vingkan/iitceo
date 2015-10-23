@@ -5,7 +5,10 @@
 @focusColor: #0EBFE9;
 @lightTone: @focusColor + #222222;
 @darkTone: @focusColor - #222222;
+
+@scarletRed: #E51937;
 @charcoal: #1a1a1a;
+@surfaceGray: rgb(245, 245, 245);
 
 /*--------------------------------------------*/
 /*---> FONTS <--------------------------------*/
@@ -13,7 +16,7 @@
 
 @AlfaSlabOne: 'Alfa Slab One', cursive;
 @SourceSansPro: 'Source Sans Pro', sans-serif;
-@smallFont: 5vh;
+@smallFont: 4vh;
 
 /*--------------------------------------------*/
 /*---> TEXT <---------------------------------*/
@@ -46,7 +49,7 @@ p{
 /*--------------------------------------------*/
 
 html{
-	background: rgb(245, 245, 245);
+	background: @surfaceGray;
 	//Default Text Styles
 	font-family: @SourceSansPro;
 	font-size: @smallFont;
@@ -71,6 +74,42 @@ html{
 }
 
 /*--------------------------------------------*/
+/*---> HEADER <-------------------------------*/
+/*--------------------------------------------*/
+
+@headerHeight: 15vh;
+
+div.headerSpace{
+	height: @headerHeight;
+}
+
+header{
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: @headerHeight;
+	background: @scarletRed;
+	color: white;
+	box-shadow: 0 0 20vh black;
+	z-index: 50;
+
+	li{
+	
+		display: inline-block;
+		height: @headerHeight;
+
+		&:hover{
+			border-bottom: 5px solid white;
+		}
+
+	}
+
+}
+
+
+/*--------------------------------------------*/
 /*---> FORM <----------------------------------*/
 /*--------------------------------------------*/
 
@@ -79,20 +118,28 @@ input, button, select{
 	border: none;
 }
 
+form{
+	font-family: @SourceSansPro;
+}
+
 form#registration{
 	width: 90%;
+	padding: 2.5%;
 	.Center();
-	background: rgba(255, 255, 255, 0.5);
-	margin-bottom: 0.5 * @parallaxBoxSize;
+	background: rgba(245, 245, 245, 0.5);
+}
+
+input, button{
+	padding: 2.5%;
+	margin: 1.75% 0;
 }
 
 input{
-	width: 100%;
+	width: 95%;
 }
 
 button{
 	width: 50%;
-	.Center();
 }
 
 /*--------------------------------------------*/
@@ -122,7 +169,8 @@ section.parallax{
 	min-height: @parallaxBoxSize;
 
 	h1{
-		line-height: @parallaxBoxSize;	
+		//line-height: @parallaxBoxSize;
+		padding: (0.25 * @parallaxBoxSize) 0;	
 	}
 	
 }
