@@ -16,7 +16,7 @@
 
 @AlfaSlabOne: 'Alfa Slab One', cursive;
 @SourceSansPro: 'Source Sans Pro', sans-serif;
-@smallFont: 4vh;
+@smallFont: 5vh;
 
 /*--------------------------------------------*/
 /*---> TEXT <---------------------------------*/
@@ -132,6 +132,7 @@ form#registration{
 input, button{
 	padding: 2.5%;
 	margin: 1.75% 0;
+	font-size: @smallFont
 }
 
 input{
@@ -139,7 +140,21 @@ input{
 }
 
 button{
+
 	width: 50%;
+	font-family: @AlfaSlabOne;
+	color: white;
+	background: linear-gradient(to right, @scarletRed 50%, @charcoal 50%);
+	background-size: 200% 100%;
+	background-position: left bottom;
+	border-radius: 0.5 * @smallFont;
+
+	&:hover{
+		background-position: right bottom;
+	}
+
+	transition: all 0.5s ease;
+
 }
 
 /*--------------------------------------------*/
