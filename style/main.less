@@ -20,7 +20,7 @@
 /*--------------------------------------------*/
 
 p{
-	width: 90vw;
+	width: 90%;
 	margin: 5vw;
 	text-align: center;
 	line-height: @smallFont * 1.25;
@@ -79,12 +79,55 @@ section.module{
 		font-size: 1.5 * @smallFont;
 	}
 
+	/*p{
+		
+		margin-bottom: 40px;
+		font-size: @smallFont;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+	}*/
+
+}
+
+.content{
+	background: @charcoal;
+	color: white;
+	padding: 40px 0;
+}
+
+@parallaxBoxSize: 40vh;
+
+.parallax{
+
+	height: @parallaxBoxSize;
+	line-height: @parallaxBoxSize;
+	.ParallaxBackground();
+
+	h1{
+		color: rgba(255, 255, 255, 0.8);
+		font-family: @AlfaSlabOne;
+		font-size: 2 * @smallFont;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	}
+
 }
 
 
 /*--------------------------------------------*/
 /*---> BACKGROUNDS <--------------------------*/
 /*--------------------------------------------*/
+
+.ParallaxBackground(){
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: cover;
+}
 
 .CoverBackground(){
 	background-repeat: no-repeat;
@@ -95,14 +138,12 @@ section.module{
 	background-size: cover;
 }
 
-section#background1{
+section.module.background1{
 	background: url('img/eastSide.jpg');
-	min-height: 400px;
-	.CoverBackground();
+	//min-height: 600px;
 }
 
-section#background2{
+section.module.background2{
 	background: url('img/theBean.jpg');
-	min-height: 400px;
-	.CoverBackground();
+	//min-height: 600px;
 }
