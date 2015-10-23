@@ -46,82 +46,6 @@ html{
 	margin: 0 auto;
 }
 
-
-/*--------------------------------------------*/
-/*---> FORM <----------------------------------*/
-/*--------------------------------------------*/
-
-input, button, select{
-	outline: none;
-	border: none;
-}
-
-/*--------------------------------------------*/
-/*---> PARALLAX <-----------------------------*/
-/*--------------------------------------------*/
-
-div.container{
-	max-width: 90%;
-	.Center();
-	text-align: center;
-	color: white;
-}
-
-section.module{
-
-	&:last-child{
-		margin-bottom: 0;
-	}
-
-	h2{
-		margin-bottom: 40px;
-		font-family: @AlfaSlabOne;
-		font-size: 1.5 * @smallFont;
-	}
-
-	/*p{
-		
-		margin-bottom: 40px;
-		font-size: @smallFont;
-
-		&:last-child{
-			margin-bottom: 0;
-		}
-
-	}*/
-
-}
-
-.content{
-	background: @charcoal;
-	color: white;
-	padding: 40px 0;
-}
-
-@parallaxBoxSize: 40vh;
-
-.parallax{
-
-	height: @parallaxBoxSize;
-	line-height: @parallaxBoxSize;
-	.ParallaxBackground();
-
-	h1{
-		color: rgba(255, 255, 255, 0.8);
-		font-family: @AlfaSlabOne;
-		font-size: 2 * @smallFont;
-		text-align: center;
-		text-transform: uppercase;
-		text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-	}
-
-}
-
-
-/*--------------------------------------------*/
-/*---> BACKGROUNDS <--------------------------*/
-/*--------------------------------------------*/
-
 .ParallaxBackground(){
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -138,12 +62,71 @@ section.module{
 	background-size: cover;
 }
 
+/*--------------------------------------------*/
+/*---> FORM <----------------------------------*/
+/*--------------------------------------------*/
+
+input, button, select{
+	outline: none;
+	border: none;
+}
+
+/*--------------------------------------------*/
+/*---> BACKGROUNDS <--------------------------*/
+/*--------------------------------------------*/
+
 section.module.background1{
-	background: url('img/eastSide.jpg');
-	//min-height: 600px;
+	background: url('img/squaresTunnel.jpg');
 }
 
 section.module.background2{
 	background: url('img/theBean.jpg');
-	//min-height: 600px;
 }
+
+/*--------------------------------------------*/
+/*---> PARALLAX <-----------------------------*/
+/*--------------------------------------------*/
+
+/*div.container{
+	max-width: 90%;
+	.Center();
+}
+
+section.module{
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	h2{
+		text-align: center;
+		font-family: @AlfaSlabOne;
+		font-size: 1.5 * @smallFont;
+	}
+
+}
+
+section.content{
+	background: @charcoal;
+	color: white;
+	padding: 40px 0;
+}
+
+@parallaxBoxSize: 40vh;
+
+section.parallax{
+
+	height: @parallaxBoxSize;
+	line-height: @parallaxBoxSize;
+	.ParallaxBackground();
+
+	h1{
+		color: rgba(255, 255, 255, 0.8);
+		font-family: @AlfaSlabOne;
+		font-size: 2 * @smallFont;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	}
+
+}*/
