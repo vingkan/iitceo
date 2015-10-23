@@ -25,7 +25,7 @@
 h1{
 	font-family: @AlfaSlabOne;
 	text-align: center;
-	font-size: 2.0 * @smallFont;
+	font-size: 1.75 * @smallFont;
 	color: rgba(255, 255, 255, 0.75);
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 	text-transform: uppercase;
@@ -126,17 +126,31 @@ form#registration{
 	width: 90%;
 	padding: 2.5%;
 	.Center();
-	background: rgba(245, 245, 245, 0.5);
+	//background: rgba(245, 245, 245, 0.5);
+	background: transparent;
 }
 
 input, button{
 	padding: 2.5%;
-	margin: 1.75% 0;
-	font-size: @smallFont
+	margin: (0.5 * @smallFont) 0;
+	font-size: @smallFont;
 }
 
 input{
+
 	width: 95%;
+	text-align: center;
+	color: @charcoal;
+	background: rgba(255, 255, 255, 0.90);
+
+	&:focus{
+		color: @scarletRed;
+		font-weight: bold;
+		background: rgba(255, 255, 255, 0.75);
+	}
+
+	transition: all 0.5s ease;
+
 }
 
 button{
@@ -147,7 +161,7 @@ button{
 	background: linear-gradient(to right, @scarletRed 50%, @charcoal 50%);
 	background-size: 200% 100%;
 	background-position: left bottom;
-	border-radius: 0.5 * @smallFont;
+	//border-radius: 0.5 * @smallFont;
 
 	&:hover{
 		background-position: right bottom;
