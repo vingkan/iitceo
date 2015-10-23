@@ -1,3 +1,5 @@
+/* Thanks to http://callmenick.com/post/simple-parallax-scrolling-effect for Parallax Effect Code! */
+
 section.module:last-child {
   margin-bottom: 0;
 }
@@ -10,9 +12,9 @@ section.module p {
   font-size: 16px;
   font-weight: 300;
 }*/
-section.module p:last-child {
+/*section.module p:last-child {
   margin-bottom: 0;
-}
+}*/
 section.module.content {
   padding: 40px 0;
 }
