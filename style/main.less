@@ -77,10 +77,11 @@ html{
 /*---> HEADER <-------------------------------*/
 /*--------------------------------------------*/
 
-@headerHeight: 15vh;
+@headerHeight: 10vh;
 
 div.headerSpace{
 	height: @headerHeight;
+	line-height: @headerHeight;
 }
 
 header{
@@ -92,22 +93,30 @@ header{
 	height: @headerHeight;
 	background: @scarletRed;
 	color: white;
-	box-shadow: 0 0 20vh black;
+	box-shadow: 0 0 5vh black;
 	z-index: 50;
 
 	li{
-	
 		display: inline-block;
+		margin-right: -1vw;
+		width: 24vw;
 		height: @headerHeight;
+		line-height: @headerHeight;
+		font-size: 0.65 * @smallFont;
+		text-align: center;
 
 		&:hover{
-			border-bottom: 5px solid white;
+			background: white;
+			color: @scarletRed;
+			font-weight: bold;
+			border-bottom: 2vh solid @scarletRed;
 		}
+
+		transition: all 0.5s ease;
 
 	}
 
 }
-
 
 /*--------------------------------------------*/
 /*---> FORM <----------------------------------*/
