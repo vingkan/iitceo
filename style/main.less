@@ -42,6 +42,10 @@ html{
 /*---> STRUCTURE <----------------------------*/
 /*--------------------------------------------*/
 
+.Center(){
+	margin: 0 auto;
+}
+
 
 /*--------------------------------------------*/
 /*---> FORM <----------------------------------*/
@@ -53,5 +57,52 @@ input, button, select{
 }
 
 /*--------------------------------------------*/
-/*---> PARALLAX <----------------------------*/
+/*---> PARALLAX <-----------------------------*/
 /*--------------------------------------------*/
+
+div.container{
+	max-width: 90%;
+	.Center();
+	text-align: center;
+	color: white;
+}
+
+section.module{
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	h2{
+		margin-bottom: 40px;
+		font-family: @AlfaSlabOne;
+		font-size: 1.5 * @smallFont;
+	}
+
+}
+
+
+/*--------------------------------------------*/
+/*---> BACKGROUNDS <--------------------------*/
+/*--------------------------------------------*/
+
+.CoverBackground(){
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+section#background1{
+	background: url('img/eastSide.jpg');
+	min-height: 400px;
+	.CoverBackground();
+}
+
+section#background2{
+	background: url('img/theBean.jpg');
+	min-height: 400px;
+	.CoverBackground();
+}
