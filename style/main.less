@@ -14,7 +14,7 @@
 /*---> FONTS <--------------------------------*/
 /*--------------------------------------------*/
 
-@AlfaSlabOne: 'Alfa Slab One', cursive;
+@AlfaSlabOne: 'Alfa Slab One', sans-serif;
 @SourceSansPro: 'Source Sans Pro', sans-serif;
 @smallFont: 5vh;
 
@@ -126,6 +126,15 @@ header{
 			border-bottom: 2vh solid @scarletRed;
 		}
 
+		a{
+	
+			color: white;
+
+			&:hover{
+				color: @scarletRed;
+			}
+		}
+
 		transition: all 0.5s ease;
 
 	}
@@ -138,7 +147,7 @@ footer{
 	color: white;
 
 	p{
-		font-size: 0.5 * @smallFont;
+		font-size: 0.25 * @smallFont;
 		width: 100%;
 		margin: 0;
 		padding: 0;
@@ -213,23 +222,23 @@ button{
 /*---> BACKGROUNDS <--------------------------*/
 /*--------------------------------------------*/
 
-section.module.background1{
+section.module.section1{
 	background: url('img/iitSkyline.jpg');
 }
 
-section.module.background2{
+section.module.section2{
 	background: url('img/squaresTunnel.jpg');
 }
 
-section.module.background3{
+section.module.section3{
 	background: url('img/eastSide.jpg');
 }
 
-section.module.background4{
+section.module.section4{
 	background: url('img/theBean.jpg');
 }
 
-section.module.background5{
+section.module.section5{
 	background: url('img/lakeShore.jpg');
 }
 
