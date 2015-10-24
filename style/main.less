@@ -44,6 +44,20 @@ p{
 	line-height: @smallFont * 1.25;
 }
 
+a{
+
+	text-decoration: none;
+	color: @scarletRed;
+	font-weight: bold;
+
+	&:hover{
+		color: @charcoal;
+	}
+
+	transition: all 0.5s ease;
+
+}
+
 /*--------------------------------------------*/
 /*---> BODY <---------------------------------*/
 /*--------------------------------------------*/
@@ -74,10 +88,10 @@ html{
 }
 
 /*--------------------------------------------*/
-/*---> HEADER <-------------------------------*/
+/*---> HEADER & FOOTER <----------------------*/
 /*--------------------------------------------*/
 
-@headerHeight: 10vh;
+@headerHeight: 7.5vh;
 
 div.headerSpace{
 	height: @headerHeight;
@@ -114,6 +128,20 @@ header{
 
 		transition: all 0.5s ease;
 
+	}
+
+}
+
+footer{
+
+	background: @scarletRed;
+	color: white;
+
+	p{
+		font-size: 0.5 * @smallFont;
+		width: 100%;
+		margin: 0;
+		padding: 0;
 	}
 
 }
