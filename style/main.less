@@ -26,8 +26,8 @@ h1{
 	font-family: @AlfaSlabOne;
 	text-align: center;
 	font-size: 1.75 * @smallFont;
-	color: rgba(255, 255, 255, 0.75);
-	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	color: rgba(255, 255, 255, 1.0);
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
 	text-transform: uppercase;
 }
 
@@ -85,6 +85,12 @@ html{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+section.content{
+	color: white;
+	background: lighten(black, 5%) url('img/citymazediagonaltrans.png');
+	background-size: 50vh;
 }
 
 /*--------------------------------------------*/
@@ -152,7 +158,7 @@ header{
 
 }
 
-footer{
+/*footer{
 
 	background: @scarletRed;
 	color: white;
@@ -164,7 +170,7 @@ footer{
 		padding: 0;
 	}
 
-}
+}*/
 
 /*--------------------------------------------*/
 /*---> FORM <----------------------------------*/
