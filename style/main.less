@@ -159,10 +159,12 @@ header{
 
 }
 
-footer{
+/*footer{
 
-	background: @scarletRed;
+	//background: @scarletRed;
+	background: url("img/ceocitybannercolor.png");
 	color: white;
+	height: 20vh;
 
 	p{
 		font-size: 0.25 * @smallFont;
@@ -171,7 +173,36 @@ footer{
 		padding: 0;
 	}
 
+}*/
+
+@footerHeight: 15vh;
+
+footer{
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: @footerHeight;
+	width: 100vw;
+	background: url('img/ceocitybannercolor.png');
+	background-size: auto @footerHeight;
+	background-repeat: no-repeat;
+	background-position: 2.5% bottom;
+	z-index: 100;
+
+	address{
+		font-size: 0.35 * @smallFont;
+		position: fixed;
+		bottom: 0.15 * @smallFont;
+		right: 0.15 * @smallFont;
+		color: white;
+	}
+
 }
+
+	div.footerSpace{
+		height: @footerHeight;
+	}
 
 /*--------------------------------------------*/
 /*---> FORM <----------------------------------*/
