@@ -64,7 +64,7 @@
 
 		<section class="module content">
 			<div class="container">
-				<p>Invite your friends to sign up at <a href="http://quickpiitch.tk">quickpIITch.tk</a>!</p>
+				<p>Invite your friends to RSVP on our <a href="https://www.facebook.com/events/999480900103276/" target="_blank">Facebook Event</a>!</p>
 			</div>
 		</section>
 
@@ -116,6 +116,11 @@
 				var name = document.getElementById('name').value;
 				var email = document.getElementById('email').value;
 				alert(name + ': ' + email);
+				var event = new Firebase("https://tinderpreneurship.firebaseio.com/events/startup-iit");
+				event.push({
+					name: name,
+					email: email
+				});
 			}
 
 		</script>
