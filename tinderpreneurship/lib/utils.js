@@ -14,6 +14,12 @@ function openSection(focusSection, override){
 		if(focusSection === 'profile'){
 			loadProfile();
 		}
+		if(focusSection === 'browse'){
+			loadProfileData(loadBrowsingProfiles);
+		}
+		if(focusSection === 'contact'){
+			loadProfileData(loadContactProfiles);
+		}
 		if(currentSection === 'profile'){
 			updateProfile();
 		}
@@ -53,10 +59,19 @@ function closeMessageBox(){
 	$('#messageBox').addClass('close');
 }
 
+
+/*
+* Set to String Prototype based on this S/O Function:
+* http://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+*/
+String.prototype.toTitleCase = function toTitleCase(){
+	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+
 function convertOptionTagName(tag, toReadable){
 	var response;
 	if(toReadable){
-		//Not ready for this case yet.
+		response = tag.replace('-', ' ').toTitleCase();
 	}
 	else{
 		response = tag.replace(/\s+/g, '-').toLowerCase();

@@ -20,7 +20,9 @@ function checkUserInDatabase(authData){
 				desires: JSON.stringify([]),
 				peeves: "",
 				secretname: getNewSecretName(),
-				strengths: JSON.stringify([])
+				strengths: JSON.stringify([]),
+				likedyou: JSON.stringify([]),
+				youliked: JSON.stringify([])
 			});
 			displayMessage("Welcome to Tinderpreneurship!<br>Since this is your first time, fill out this profile to help others learn more about you.")
 			openSection('profile');
@@ -78,7 +80,7 @@ function getNewSecretName(){
 	var number = Math.floor((9999 - 1000) * Math.random()) + 1000;
 	var secretname = color.charAt(0).toUpperCase() + color.substr(1) + animal.charAt(0).toUpperCase() + animal.substr(1) + number;
 	
-	var secretNameRef = new Firebase("https://tinderpreneurship.firebaseio.com/users/secretnames");
+	var secretNameRef = new Firebase("https://tinderpreneurship.firebaseio.com/secretnames");
 	console.log(secretname);
 	secretNameRef.push(secretname);
 

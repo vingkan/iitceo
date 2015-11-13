@@ -141,6 +141,25 @@ p{
 	margin: 0.50 * @textSize;
 }
 
+	p.subtitle{
+		
+		font-size: 0.40 * @textSize;
+		line-height: 0.50 * @textSize;
+		//margin: 0.20 * @textSize;
+	}
+
+ul{
+	width: 85%;
+	margin: 5% 10%;
+}
+
+li{
+	font-size: 0.75 * @textSize;
+	list-style-type: square;
+	text-align: left;
+}
+
+
 /*--------------------------------------------*/
 /*---> FORMS <--------------------------------*/
 /*--------------------------------------------*/
@@ -275,6 +294,39 @@ div#messageBox{
 	}
 
 	.AnimateAll();
+
+}
+
+/*--------------------------------------------*/
+/*---> BROWSING <-----------------------------*/
+/*--------------------------------------------*/
+
+@profileHeight: 55vh;
+
+div.people{
+
+	background: transparent;
+	height: @profileHeight;
+	width: 80vw;
+	border: 5vw solid rgba(255, 255, 255, 0.05);
+	margin: 5vw 2.5vw;
+	overflow-y: scroll;
+
+	h2{
+		color: white;
+	}
+
+	button{
+		position: absolute;
+		z-index: 5;
+		width: 7.5vw;
+		height: @profileHeight;
+		line-height: @profileHeight;
+		left: 2.5vw;
+		padding: 0;
+		margin: 0;
+		border-radius: 0;
+	}
 
 }
 
