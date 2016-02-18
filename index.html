@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<title>IIT CEO</title>
-		<!-- <link rel="icon" type="img/png" href="style/favicon.png" style="width:30px;"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="img/png" href="style/favicon.png" style="width:30px;">
 		<link rel="stylesheet" type="text/css" href="style/reset.css">
 		<link rel="stylesheet" type="text/css" href="style/main.css">
 		<link rel="stylesheet" type="text/css" href="style/parallax.css">
@@ -146,6 +147,13 @@
 
 
 		<script type="text/javascript">
+
+			$('a').click(function(){
+				$('html, body').animate({
+					scrollTop: $( $.attr(this, 'href') ).offset().top
+				}, 500);
+				return false;
+			});
 
 			function submitUser(){
 				var name = document.getElementById('name').value;
